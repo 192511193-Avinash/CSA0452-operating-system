@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main() {
+    int users, files;
+    char user[10][20], fname[10][20];
+
+    printf("Enter number of users: ");
+    scanf("%d", &users);
+
+    for(int i=0;i<users;i++) {
+        printf("Enter username: ");
+        scanf("%s", user[i]);
+
+        printf("Enter number of files: ");
+        scanf("%d", &files);
+
+        for(int j=0;j<files;j++) {
+            printf("Enter file name: ");
+            scanf("%s", fname[j]);
+        }
+
+        printf("User %s files:\n", user[i]);
+        for(int j=0;j<files;j++)
+            printf("%s\n", fname[j]);
+    }
+
+    return 0;
+}
